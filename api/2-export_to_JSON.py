@@ -2,9 +2,9 @@
 """
     gathers data from api
 """
+import json
 import requests
 from sys import argv
-import json
 
 if __name__ == '__main__':
     """
@@ -23,7 +23,7 @@ if __name__ == '__main__':
         baseDict = {'task': task["title"],
                     'completed': task["completed"],
                     'username': info["username"],
-        }
+                    }
         dictionary.append(baseDict)
 
     with open(f"{id}.json", 'w') as f:
