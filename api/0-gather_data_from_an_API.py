@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     done_tasks = [task for task in tasks if task["completed"]]
 
-    print(f'Employee {info["name"]} is done with tasks', end=' ')
+    print(f'Employee {info["name"]} is done with tasks', end='')
 
     print(f'({len(done_tasks)}/{len(tasks)}):')
 
