@@ -13,7 +13,7 @@ if __name__ == '__main__':
 
     url = 'https://jsonplaceholder.typicode.com/'
 
-    id = argv[1]
+    id = int(argv[1])
     info = requests.get(url + f'users/{id}').json()
     tasks = requests.get(url + f'users/{id}/todos').json()
 
@@ -21,5 +21,8 @@ if __name__ == '__main__':
 
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for task in tasks:
-            writer.writerow([id, info['name'], task['completed'],
-                            task['title']],)
+            writer.writerow([id,
+                             info['name'],
+                             task['completed'],
+                             task['title']],
+                            )
