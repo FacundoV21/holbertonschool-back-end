@@ -24,7 +24,7 @@ if __name__ == '__main__':
             dictionary["username"] = user["username"]
             dictionary["task"] = todo["title"]
             dictionary["completed"] = todo["completed"]
-            
+
             list.append(dictionary)
         data[f"{user['id']}"] = list
 
